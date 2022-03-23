@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap');
+/* global variable colors  */
+:root{
+    --deep-cyan:#00FFF0;
+    --navvyBlue:#223047;
+    --gray:#97A4BE;
+    --ligth_black:#233148;
+    --white:#fff;
+    --two_black:#233148;
+    --grey:#97a4be;
+    --light-gray:#f5f6fa;
+}
+
+/* global class  */
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    transition: all linear .3s;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: 'Dosis', sans-serif;
+}
+/* componants  */
+.btn {
+    padding: 11px 21px;
+    font-size: 14px;
+    border-radius: 8px;
+    color: var(--ligth_black);
+    background:var(--deep-cyan);
+    cursor: pointer;
+    font-weight: 600;
+}
+.mt-100{
+    margin-top: 100px;
+}
+.mb-100{
+    margin-bottom: 100px;
+}
+.pt-100{
+    padding-top: 100px;
+}
+.pb-100{
+    padding-bottom: 100px;
+}
+/* grid layouts  */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+float: left;   
+/* border: 1px solid var(--gray); */
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+}
+/* header part start here  */
+header{
+    position: relative;
+}
+header .navbar{
+    background: var(--navvyBlue);
+    border-bottom: 1px solid #97a4be87;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100000;
+}
+header .navbar .logo {
+    padding: 10px 0 20px;
+}
+header .navbar .logo a{
+    margin-top: 10px;
+    color:var(--deep-cyan);
+    text-transform: lowercase;
+    font-size: 35px;
+}
+header .navbar .logo a span{
+    color:var(--deep-cyan);
+    font-size: 30px;
+}
+ul.menu_Items {
+    margin-top: 28px;
+    padding-bottom: 31px;
+    text-align: center;
+}
+.navbar .menu_Items li{
+    display: inline-block;
+    text-align: center;
+}
+.navbar .menu_Items li a {
+    color: cyan;
+    font-size: 14px;
+    margin: 0 2px;
+    padding: 10px;
+}
+header .navbar .icon{
+    text-align: right;
+    margin-top: 21px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: end;
+}
+
+.navbar #ToggleBar{
+    font-size: 25px;
+    color: var(--white);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-left: 29px;
+    cursor: pointer;
+}
+
+/* mobile menu bar code  */
+.mobile_menu{
+    display: none;
+}
+
+#ToggleBar{
+    display: none;
+}
+
+/* hero part start here  */
+.hero{
+    height: 550px;
+    background: var(--navvyBlue);    
+}
+.writing_part{
+    margin-top: 150px;
+}
+.writing_part h1 {
+    font-size: 40px;
+    color:var(--white);
+}
+
+.writing_part p {
+    font-size: 14px;
+    color: #97a4be;
+    line-height: 1.5;
+    padding: 30px 0;
+    width: 65%;
+}
+.hero .hero_btn{
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.hero .hero_btn .hero_btn_color{
+    margin-right: 20px;
+}
+.hero .hero_btn .hero_btn_trans{
+    background: transparent;
+    border: 1px solid var(--deep-cyan);
+    color: var(--white);
+}
+.hero .hero_image{
+    text-align: center;
+    position: relative;
+    top: 120px;
+}
+.hero .hero_image .hero_img{
+    height: 40%;
+    width: 40%;
+}
+
+/* app brend part start here  */
+.app_brend{
+    margin-top: 50px;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 120px;
+}
+.app_brend .heading h3{
+   font-weight: 500;
+   margin: auto;
+   font-size: 30px;
+   line-height: 1.5;
+   color: var(--two_black);
+   position: relative;
+}
+.app_brend .heading h3::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100px;
+    background: var(--deep-cyan);
+    top: 126px;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.app_brend .app_brend_box{
+    box-shadow: 0 0px 3px 0px #97A4BEA1;
+    padding: 20px;
+    margin: 0 20px;
+    text-align: center;
+    border-radius: 5px;
+    background: var(--white);
+}
+.app_brend .app_brend_box:hover{
+    background: var(--deep-cyan);
+    color: #fff;
+}
+.app_brend .app_brend_box:hover h4,
+.app_brend .app_brend_box:hover p{
+    color: #fff;
+}
+.app_brend .app_brend_box h4{
+    font-size: 15px;
+    padding: 10px 0;
+    color: var(--two_black);
+}
+.app_brend .app_brend_box p{
+    font-size: 14px;
+    padding: 10px 0;
+    color: var(--two_black);
+    line-height: 1.8;
+}
+/* get more info form your smart phone  start here */
+.getMore{
+    margin-bottom: 10px;
+}
+.getMoreImg,
+.getMoreWriting{
+    height: 500px;
+}
+.getMore img{
+    height: 100%;
+    width: 100%;
+    /* object-fit: cover; */
+}
+.getMoreWriting{
+    background: var(--light-gray);
+    padding: 50px;
+}
+.getMoreWriting .getMoreContent{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.getMoreWriting .getMoreContent h4{
+    font-size: 30px;
+    color: var(--two_black);
+    font-weight: 500;
+}
+.getMoreWriting .getMoreContent p{
+    font-size: 15px;
+    color: var(--grey);
+    padding: 20px 0;
+    width: 60%;
+    line-height: 1.6;
+}
+
+
+/* stable and ready part start here */
+.stable_ReadyImg,
+.stable_ReadyWriting{
+    height: 450px;
+    /* border: 1px solid; */
+}
+.stable_ReadyImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stable_Ready img{
+    height: 60%;
+    width: 80%;
+    /* object-fit: cover; */
+    text-align: right;
+}
+.stable_ReadyWriting{
+    padding: 50px;
+}
+.stable_ReadyWriting .stable_ReadyContent{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+}
+.stable_ReadyWriting .stable_ReadyContent h4{
+    font-size: 30px;
+    color: var(--two_black);
+    font-weight: 500;
+}
+.stable_ReadyWriting .stable_ReadyContent p{
+    font-size: 15px;
+    padding: 20px 0;
+    line-height: 1.6;
+    color: var(--grey);
+}
+.app_presentation img{
+    height:100%;
+    width: 100%;
+    position: relative;
+    top: 103px;
+    left: 0;
+}
+.app_presentation{
+    padding: 30px 50px;
+}
+.app_presentation .appService .app_cat{
+    display: flex;
+    justify-content: flex-start
+}
+.app_presentation .appService .app_cat{
+    background: var(--white);
+    box-shadow: 0 0 2px 3px var(--light-gray);
+    margin: 20px 0;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+.app_presentation .appService .app_cat i{
+    font-size: 20px;
+    margin-right: 20px;
+}
+.app_presentation .appService .app_cat p{
+    font-size: 17px;
+    line-height: 1.5;
+}
+.app_presentation .appService .app_cat.active{
+    background: var(--deep-cyan);
+}
+
+/* need part start here  */
+.need{
+    background: var(--light-gray);
+    padding: 20px 20px 0px 20px;
+    /* margin-bottom: 50px; */
+}
+.need_writing,
+.need_pic{
+    height: 500px;
+    /* border: 1px solid; */
+}
+.need_writing{
+    display: flex;
+    align-items: flex-end;
+    flex-flow: column;
+    justify-content: center;
+    padding-right: 100px;
+    text-align: right;
+}
+.picWarp{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 100%;
+}
+.small_box{
+    width: 25%;
+    height: 60%;
+}
+.big_box{
+    height: 80%;
+    width: 50%
+}
+.picWarp .need_pic_box img{
+    width: 100%;
+    height: 100%;
+}
+.need_writing h4 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+.redioBtn .need_icon {
+    height: 30px;
+    width: 30px;
+    background: cyan;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 10px;
+    margin: 10px 0;
+  }
+  .redioBtn .need_icon i{
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--two_black);
+      margin-top: -10px;
+  }
+  .icon_box{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+  }
+  .icon_box p{
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: 600;
+  }
+.redioBtn{
+    margin: 20px 0;
+    margin-bottom: 30px;
+}
+.need_writing .need_des{
+    font-weight: 17px;
+    color: var(--gray);
+    line-height: 1.6;
+}
+/* play video part start here  */
+.playVideo{
+    background: var(--navvyBlue);
+    text-align: center;
+    /* margin-bottom: 30px; */
+    padding: 100px;
+    position: relative;
+}
+.playBtn{
+    height: 80px;
+    width: 80px;
+    background: var(--deep-cyan);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.playBtn i{
+    font-size: 33px;
+    margin-top: 24px;
+    margin-left: 8px;
+    color: var(--two_black);
+}
+
+.playVideoWrapper h4 {
+    font-size: 20px;
+    padding: 20px 0;
+    color: #fff;
+  }
+.playVideoWrapper p {
+    width: 50%;
+    font-size: 14px;
+    line-height: 1.8;
+    color: cyan;
+    margin: auto;
+  }
+/* satisfaied part start here  */
+.satisfied{
+    /* background: var(--white); */
+    text-align: center;
+    /* margin-bottom: 30px; */
+    padding: 120px;
+    position: relative;
+    height: 500px;
+    background: url('../img/download_back.gif') no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+.satisfied_content{
+    margin-top: 60px;
+}
+.satisfied_content h4 {
+    font-size: 30px;
+    color: var(--two_black);
+  }
+  .satisfied_content p {
+    font-size: 15px;
+    padding: 26px 0;
+  }
+  .satisfied_btn{
+    border-radius: 0;
+    padding: 12px 52px;
+    margin-top: 20px;
+  }
+  /* app info part start here  */
+  .Appinfo{
+      padding: 80px;
+      background: var(--navvyBlue);
+      text-align: center;
+  }
+  .Appinfo p{
+      font-size: 16px;
+      color: var(--deep-cyan);
+      width: 50%;
+      margin: auto;
+      line-height: 1.9;
+      margin-top: 10px;
+      padding: 0 40px;
+  }
+
+  /* app available place  */
+  .availableApp{
+      padding: 50px 0;
+      background: var(--light-gray);
+      margin-bottom: 50px;
+  }
+  .availableApp .app_image,
+  .availableApp .playStoreInfo{
+    height: 500px;
+    text-align: center;
+  }
+  .availableApp .app_image{
+      padding: 20px;
+  }
+  .availableApp .app_image img{
+      height: 100%;
+      
+  }
+  .availableApp .playStoreInfo{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-flow: column;
+      text-align: left;
+      padding: 50px;
+  }
+.playStoreInfo h4 {
+    font-size: 30px;
+    color: #222;
+  }
+  .playStoreInfo p {
+    font-size: 17px;
+    color: #ccc;
+    padding: 20px 0;
+    line-height: 1.8;
+  }
+  .appPlace .googleApp{
+      margin-right: 10px;
+  }
+  .appAvailableBtn{
+      text-align: center;
+      position: relative;
+      top: 75px;
+  }
+  .btn.appAvailable {
+    border-radius: 0;
+    padding: 15px 53px;
+    box-shadow: 0 0 3px 3px #ccc;
+  }
+  /* big footer part start here  */
+  
+  .big_footer{
+      padding: 50px 0;
+  }
+  
+  .big_footer .big_f_box{
+      height: 175px;
+      margin:0 15px;
+  }
+  .big_footer .big_f_box h3 {
+    font-size: 15px;
+    color:var(--two_black);
+    margin-bottom: 24px;
+  }
+  .big_footer .big_f_box .link a {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
+    color: var(--grey);
+  }
+  .getInTouch{
+      text-align: center;
+      padding: 45px 0 50px;
+  }
+  
+.getInTouch h4 {
+    font-size: 30px;
+    padding: 10px;
+    color: #222;
+    font-weight: 500;
+  }
+  .getInTouch p {
+    font-size: 14px;
+    padding: 8px 0 30px;
+    color: #ccc;
+  }
+  .input_group{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+      margin: auto;
+  }
+.input_group input{
+    width: 100%;
+    border: 1px solid var(--light-gray);
+    padding: 13px 10px;
+    background: var(--light-gray);
+    text-transform: none;
+    margin: 0 10px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.comment {
+    width: 123px;
+    padding: 0;
+    height: 100%;
+    padding: 15px 2px;
+    font-size: 16px;
+    background: cyan;
+    font-weight: 50;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  /* footer part start here  */
+  footer{
+      background: var(--navvyBlue);
+      padding: 30px 0 25px;
+  }
+  footer .social{
+      text-align: right;
+  }
+  footer p {
+    color: #fff;
+}
+.social i {
+    color: #fff;
+    margin: 0 10px;
+}
+#top{
+    position: fixed;
+    bottom: 36px;
+    right: 53px;
+    z-index: 99999;
+    height: 50px;
+    width: 50px;
+    background: cyan;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+#top i{
+    font-size: 20px;
+}
+
